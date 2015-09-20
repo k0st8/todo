@@ -1,0 +1,21 @@
+<p>This is the partial for view 2.</p>
+<div>
+  <a href="#/main">Main</a>
+  <h2>Task {{task.id}}</h2>
+<form>
+  <div class="form-group">
+    <label for="inputTaskId">#Id</label>
+    <input type="text" class="form-control" id="inputTaskId" name="inputTaskId" placeholder="Task Id" disabled>
+  </div>
+  <div class="form-group">
+    <label for="inputTitle">Title</label>
+    <input type="text" class="form-control" id="inputTitle" name="inputTitle" placeholder="Title">
+  </div>
+  <div class="form-group">
+    <label for="textareaDesc">Description</label>
+    <textarea class="form-control" rows="3" name="textareaDesc"></textarea>
+  </div>
+  <button type="submit" class="btn btn-primary" ng-click="updateTask($event)">Submit</button>
+  <a href="#/" class="btn btn-default btn-xs">Back</a>
+</form>
+</div>

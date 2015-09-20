@@ -1,0 +1,109 @@
+<div>
+  <h2>Main</h2>
+  <table class="table">
+  <thead>
+        <tr>
+          <th>#</th>
+          <th>Title</th>
+        </tr>
+      </thead>
+      <!-- #id title -->
+      <tbody>
+        <tr>
+          <td></td>
+          <td>
+            <div class="input-group">
+              <input type="text" class="form-control" placeholder="Enter task you want to do" aria-describedby="basic-addon1" ng-model="title" required autofocus/>
+              <span class="input-group-addon clickable"  ng-click="addTask(title.length == 0, $event)">
+                <span class="glyphicon glyphicon-plus"></span>
+              </span>
+              
+            </div>
+          </td>
+        </tr>
+      </tbody>
+  </table>
+
+
+<div id="template" style="display:none;">
+  <!-- new entery -->
+    <div class="input-group"> 
+      <span class="input-group-addon todo-status">
+        <input type="checkbox" name="todo-complited" id="todo-complited" ng-click="complitedTask($event)" required>
+      </span>
+      <input type="text" class="form-control" placeholder="Enter task you want to do" aria-describedby="basic-addon1"/>
+      <span class="input-group-addon clickable" ng-click="removeTask($event)">
+        <span class="glyphicon glyphicon-remove"></span>
+      </span>
+      
+      <div class="input-group-addon edit-todo-id clickable" ng-click="editTask($event)" id="{{counter}}">
+        <span class="glyphicon glyphicon-pencil">
+        </span>
+      </div>
+    </div> <!-- end new entery -->
+</div>
+
+<!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Singup/Login</h4>
+        </div>
+        <div class="modal-body">
+          <!-- FIXME for now is not in use-->
+          <!-- fieldset id="login-form" style="display: none;">
+            <legend>Login</legend>
+            <form>
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" class="form-control" id="username" name="username" placeholder="Enter username" aria-describedby="basic-addon1"required autofocus/>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" class="form-control" id="password" name="password" placeholder="Enter password" aria-describedby="basic-addon1"required/>
+            </div>
+            <button class="btn btn-success" ng-click="login($event)">Login</button>
+            </form>
+          </fieldset -->
+          <!-- signup form -->
+          <fieldset id="signup-form">
+            <legend>Singup</legend>
+              <form>
+                <div class="form-group">
+                    <label for="sgu-username">Username</label>
+                    <input type="text" class="form-control" id="sgu-username" name="sgu-username" placeholder="Enter username" aria-describedby="basic-addon1"required autofocus/>
+                </div>
+                <div class="form-group">
+                    <label for="sgu-email">Email</label>
+                    <input type="text" class="form-control"  id="sgu-email" name="sgu-email"  placeholder="Enter email" aria-describedby="basic-addon1" required/>
+                </div>
+                <div class="form-group">
+                    <label for="sgu-password">Password</label>
+                    <input type="password" class="form-control" id="sgu-password" name="sgu-password" placeholder="Enter password" aria-describedby="basic-addon1" required/>
+                </div>
+                <div class="form-group">
+                    <label for="sgu-conf-password">Confirm Password</label>
+                    <input type="password" class="form-control" id="sgu-conf-password" name="sgu-conf-password" placeholder="Enter confirm password" aria-describedby="basic-addon1" required/>
+                </div>
+                <button class="btn btn-success" id="singup-user" ng-click="signup($event)">Singup</button>
+              </form>
+            
+          </fieldset>
+
+        </div>
+        <!-- modal-body end -->
+        <div class="modal-footer">
+          <!-- <button type="button" class="btn btn-primary btn-xs pull-left" id="want-to-signup" ng-click="wantToSignup($event)">Singup</button> -->
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+
+</div>
+

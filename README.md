@@ -18,8 +18,8 @@ Register in [https://www.parse.com/](https://www.parse.com/)
 
 Clone this project and run
 
-```#
- cd todoapp && npm install
+```
+ # cd todo && npm install
 ```
 
 ```
